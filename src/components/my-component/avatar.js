@@ -1,0 +1,21 @@
+export const avatars = [
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'},
+    { imagen : 'https://icon-library.net/images/avatar-icon-png/avatar-icon-png-10.jpg'}
+  ];

@@ -1,0 +1,110 @@
+/* Base styling*/
+$background: lightgrey;
+body {
+    background-color: $background;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 1em 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  /* Popover styling */
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .popover__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-decoration: none;
+    color: $background;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  .popover__wrapper {
+    position: relative;
+    margin-top: 1.5rem;
+    display: inline-block;
+    margin-left: 200px;
+    
+  }
+  .popover__content {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: -150px;
+    transform: translate(0, 10px);
+    background-color: $background;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+    width: auto;
+    border-radius: 7px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -webkit-box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
+    -moz-box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
+    box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
+    margin-top: 20px;
+  
+  }
+  .popover__content:before {
+    position: absolute;
+    z-index: -1;
+    content: "";
+    right: calc(50% - 10px);
+    top: -8px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $background transparent;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  .popover__wrapper .popover__content {
+    z-index: 10;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, -20px);
+    transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+  }
+  .popover__message {
+    text-align: center;
+  }
+
+  img{
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+  }
+  
+
+  h1 {
+    text-align: center;
+}
+
+/*Fex grid css*/
+.container {
+    width: 200px;
+    height: 150px;
+    background: bfbfbf;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item {
+    background: $background;
+    width: calc((100% - 30px) / 4);
+    margin-bottom: 10px;
+    margin-left: 5px;
+    flex: none;
+    &:nth-last-child(-n+4) {
+        margin-bottom: 0px;
+    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkblue;
+}
