@@ -10,6 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface MyComponent {
+    'avatar': string;
     'drop': boolean;
   }
 }
@@ -29,7 +30,9 @@ declare global {
 
 declare namespace LocalJSX {
   interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
+    'avatar'?: string;
     'drop'?: boolean;
+    'onAvatarSelected'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {

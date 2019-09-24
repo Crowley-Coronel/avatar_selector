@@ -1,5 +1,6 @@
 /* Base styling*/
-$background: lightgrey;
+$background: white;
+$ancho: 200px;
 body {
     background-color: $background;
     max-width: 768px;
@@ -40,7 +41,7 @@ body {
     padding: 1.5rem;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
     width: auto;
-    border-radius: 7px;
+    border-radius: 7px 7px 7px 7px;
     overflow-y: scroll;
     scrollbar-width: none;
     -webkit-box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
@@ -67,6 +68,8 @@ body {
     visibility: visible;
     transform: translate(0, -20px);
     transition: all 0.5s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    margin-left: 50px;
+    margin-top: 25px;
   }
   .popover__message {
     text-align: center;
@@ -85,7 +88,7 @@ body {
 
 /*Fex grid css*/
 .container {
-    width: 200px;
+    width: $ancho;
     height: 150px;
     background: bfbfbf;
     margin: auto;
@@ -107,4 +110,24 @@ body {
     justify-content: center;
     align-items: center;
     color: darkblue;
+}
+
+
+.static_avatar{
+  width: 50px;
+  height: 50px;
+}
+
+.avatar_flex_grid_element:hover{
+  transform: scale(1.1);
+}
+
+.escalar{
+  animation-name: escalar;
+  animation-duration: 0.5s;
+}
+
+@keyframes escalar{
+  from {transform: scale(1); opacity: 100%;}
+  to { transform: scale(1.3); opacity: 0 }
 }
