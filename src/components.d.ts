@@ -9,7 +9,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-  interface MyComponent {
+  interface AvatarSelect {
     'avatar': string;
     'drop': boolean;
   }
@@ -18,25 +18,25 @@ export namespace Components {
 declare global {
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLAvatarSelectElement extends Components.AvatarSelect, HTMLStencilElement {}
+  var HTMLAvatarSelectElement: {
+    prototype: HTMLAvatarSelectElement;
+    new (): HTMLAvatarSelectElement;
   };
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'avatar-select': HTMLAvatarSelectElement;
   }
 }
 
 declare namespace LocalJSX {
-  interface MyComponent extends JSXBase.HTMLAttributes<HTMLMyComponentElement> {
+  interface AvatarSelect extends JSXBase.HTMLAttributes<HTMLAvatarSelectElement> {
     'avatar'?: string;
     'drop'?: boolean;
     'onAvatarSelected'?: (event: CustomEvent<any>) => void;
   }
 
   interface IntrinsicElements {
-    'my-component': MyComponent;
+    'avatar-select': AvatarSelect;
   }
 }
 

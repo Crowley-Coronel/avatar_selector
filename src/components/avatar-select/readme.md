@@ -9,7 +9,15 @@
 
 | Property | Attribute | Description | Type      | Default     |
 | -------- | --------- | ----------- | --------- | ----------- |
+| `avatar` | `avatar`  |             | `string`  | `undefined` |
 | `drop`   | `drop`    |             | `boolean` | `undefined` |
+
+
+## Events
+
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `avatarSelected` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

@@ -3,11 +3,11 @@ import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
 import { avatars } from './avatar.js';
 
 @Component({
-  tag: 'my-component',
+  tag: 'avatar-select',
   styleUrl: 'avatar.scss',
   shadow: true
 })
-export class MyComponent {
+export class AvatarSelect {
 
   @Prop() drop: boolean;
   @Prop() avatar: string;

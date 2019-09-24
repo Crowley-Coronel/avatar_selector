@@ -12,10 +12,10 @@
 <body>
 
   <div style="margin-left: 200px;">
-    <my-component></my-component>
+    <avatar-select></avatar-select>
   </div>
 <script>
-const mycomponent = document.querySelector('my-component');
+const mycomponent = document.querySelector('avatar-select');
 mycomponent.addEventListener('avatarSelected', event => { 
    console.log(event.detail.avatar);
   })
