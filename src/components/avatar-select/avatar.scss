@@ -35,7 +35,6 @@ body {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    left: -150px;
     transform: translate(0, 10px);
     background-color: $background;
     padding: 1.5rem;
@@ -47,8 +46,26 @@ body {
     -webkit-box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
     -moz-box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
     box-shadow: -1px 3px 12px 5px rgba(166,166,166,0.45);
+  }
+
+  .bottom {
+    left: -150px;
     margin-top: 20px;
-  
+  }
+
+  .top {
+    left: -150px;
+    top: -220px;
+  }
+
+  .right{
+    top: -70px;
+    left: 10px;
+  }
+
+  .left{
+    top: -70px;
+    right: 60px;
   }
   .popover__content:before {
     position: absolute;

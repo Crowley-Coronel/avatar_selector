@@ -12,13 +12,21 @@ export class AvatarSelect {
   @Prop() drop: boolean;
   @Prop() avatar: string;
   @Event() avatarSelected: EventEmitter;
+  @Prop() alignment: string;
+  @Prop() dark_mode: boolean;
+  @Prop() customClass: string;
 
-  inicializar();
-
-  public inicializar(){
-    this.avatar = 'data:image/png;base64, ' + avatars[0].imagen;
+  constructor(){
+    let avatar_selected = { index: '', avatar: ''};
+        
+    if(window.localStorage.getItem('avatar') != null ){
+      avatar_selected = JSON.parse(window.localStorage.getItem('avatar'));
+      this.avatar = avatar_selected.avatar;
+    }    
+    this.avatar =  avatars[0].imagen;
   }
 
+ 
    public getAvatars(){
       let array_r = [];
       avatars.forEach((element,index) => {
@@ -36,11 +44,12 @@ export class AvatarSelect {
   public set_avatar(index = 0){
     this.avatar = avatars[index].imagen;
     this.drop = false;
-    let data = {
+    let avatar_seleccionado = {
       avatar: this.avatar,
       indice: index
     };
-    this.avatarSelected.emit(data);
+    this.avatarSelected.emit(avatar_seleccionado);
+    window.localStorage.setItem('avatar', JSON.stringify(avatar_seleccionado));
   }
 
   public activar (){
@@ -56,7 +65,7 @@ export class AvatarSelect {
                            onClick={() => this.activar() } 
                            class="static_avatar"
                       />
-                    <div class="popover__content" >
+                    <div class={ 'popover__content ' + this.alignment } >
                       <div class="container">
                         { this.getAvatars() }
                       </div>
