@@ -7,10 +7,11 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default     |
-| -------- | --------- | ----------- | --------- | ----------- |
-| `avatar` | `avatar`  |             | `string`  | `undefined` |
-| `drop`   | `drop`    |             | `boolean` | `undefined` |
+| Property   | Attribute  | Description | Type      | Default     |
+| ---------- | ---------- | ----------- | --------- | ----------- |
+| `avatar`   | `avatar`   |             | `string`  | `undefined` |
+| `drop`     | `drop`     |             | `boolean` | `undefined` |
+| `opciones` | `opciones` |             | `string`  | `undefined` |
 
 
 ## Events

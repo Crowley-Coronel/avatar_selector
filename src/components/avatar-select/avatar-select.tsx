@@ -12,18 +12,19 @@ export class AvatarSelect {
   @Prop() drop: boolean;
   @Prop() avatar: string;
   @Event() avatarSelected: EventEmitter;
-  @Prop() alignment: string;
-  @Prop() dark_mode: boolean;
-  @Prop() customClass: string;
-
+  @Prop() opciones: string;
+  
   constructor(){
+   
     let avatar_selected = { index: '', avatar: ''};
         
     if(window.localStorage.getItem('avatar') != null ){
       avatar_selected = JSON.parse(window.localStorage.getItem('avatar'));
       this.avatar = avatar_selected.avatar;
-    }    
-    this.avatar =  avatars[0].imagen;
+    }else{
+      this.avatar =  avatars[0].imagen;
+    }  
+   
   }
 
  
@@ -65,7 +66,7 @@ export class AvatarSelect {
                            onClick={() => this.activar() } 
                            class="static_avatar"
                       />
-                    <div class={ 'popover__content ' + this.alignment } >
+                    <div class={ 'popover__content ' + this.opciones } >
                       <div class="container">
                         { this.getAvatars() }
                       </div>

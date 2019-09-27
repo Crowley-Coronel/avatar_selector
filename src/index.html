@@ -11,27 +11,22 @@
 </head>
 <body>
 
-  <div style="margin-left: 200px;">
-    <avatar-select alignment="bottom"></avatar-select>
-  </div>
 
-  <div style="margin-left: 200px; margin-top: 200px;">
-    <avatar-select alignment="left"></avatar-select>
-  </div>
-
-  <div style="margin-left: 200px; margin-top: 200px;">
-    <avatar-select alignment="right"></avatar-select>
-  </div>
-
-  <div style="margin-left: 200px; margin-top: 200px;">
-    <avatar-select alignment="top"></avatar-select>
-  </div>
+  <div >
+    <avatar-select opciones="bottom" id="avatars">
+  </avatar-select>
   
-<script>
-const mycomponent = document.querySelector('avatar-select');
-mycomponent.addEventListener('avatarSelected', event => { 
-   console.log(event.detail.avatar);
-  })
-</script>
+  </div>
+
+  <script>
+      window.onload = function () {
+        const mycomponent = document.querySelector('avatar-select');
+        mycomponent.addEventListener('avatarSelected', event => { 
+          console.log(event.detail.avatar);
+          console.log(event.detail.indice);
+          })
+        }
+  
+    </script>
 </body>
 </html>
